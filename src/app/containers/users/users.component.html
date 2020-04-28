@@ -1,5 +1,8 @@
 <app-users
   [users]="users$ | async"
   (userSelected)="navigateToUser($event)"
-  (addUser)="navigateToUser($event)"
+  (addUserToList)="addUser($event)"
+  (changeUserScore)="changeUserScore($event)"
+  (deleteUserEmmiter)="deleteUser($event)"
+  (sort)="sort($event)"
 ></app-users>

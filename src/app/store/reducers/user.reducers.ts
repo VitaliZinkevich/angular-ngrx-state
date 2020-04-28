@@ -1,6 +1,6 @@
-import { EUserActions } from './../actions/user.actions';
-import { UserActions } from '../actions/user.actions';
-import { initialUserState, IUserState } from '../state/user.state';
+import { EUserActions } from "./../actions/user.actions";
+import { UserActions } from "../actions/user.actions";
+import { initialUserState, IUserState } from "../state/user.state";
 
 export const userReducers = (
   state = initialUserState,
@@ -10,13 +10,25 @@ export const userReducers = (
     case EUserActions.GetUsersSuccess: {
       return {
         ...state,
-        users: action.payload
+        users: action.payload,
       };
     }
     case EUserActions.GetUserSuccess: {
       return {
         ...state,
-        selectedUser: action.payload
+        selectedUser: action.payload,
+      };
+    }
+    case EUserActions.AddUserSuccess: {
+      return {
+        ...state,
+        users: action.payload,
+      };
+    }
+    case EUserActions.DeleteUserSuccess: {
+      return {
+        ...state,
+        users: action.payload,
       };
     }
 

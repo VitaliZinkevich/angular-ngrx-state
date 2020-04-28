@@ -1,30 +1,256 @@
 <table class="table table-hover">
   <thead class="thead-dark">
     <tr>
-      <th scope="col">ID</th>
-      <th scope="col">Дата внесения</th>
-      <th scope="col">Имя</th>
-      <th scope="col">Очки</th>
+      <th scope="col">
+        <span>
+          ID
+        </span>
+        <span>
+          <div>
+            <svg
+              (click)="sortUp('id')"
+              class="bi bi-arrow-up-short"
+              width="1em"
+              height="1em"
+              viewBox="0 0 16 16"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M8 5.5a.5.5 0 01.5.5v5a.5.5 0 01-1 0V6a.5.5 0 01.5-.5z"
+                clip-rule="evenodd"
+              />
+              <path
+                fill-rule="evenodd"
+                d="M7.646 4.646a.5.5 0 01.708 0l3 3a.5.5 0 01-.708.708L8 5.707 5.354 8.354a.5.5 0 11-.708-.708l3-3z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </div>
+          <div>
+            <svg
+              (click)="sortDown('id')"
+              class="bi bi-arrow-down-short"
+              width="1em"
+              height="1em"
+              viewBox="0 0 16 16"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M4.646 7.646a.5.5 0 01.708 0L8 10.293l2.646-2.647a.5.5 0 01.708.708l-3 3a.5.5 0 01-.708 0l-3-3a.5.5 0 010-.708z"
+                clip-rule="evenodd"
+              />
+              <path
+                fill-rule="evenodd"
+                d="M8 4.5a.5.5 0 01.5.5v5a.5.5 0 01-1 0V5a.5.5 0 01.5-.5z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </div>
+        </span>
+      </th>
+      <th scope="col">
+        <span>
+          Дата внесения
+        </span>
+        <span>
+          <div>
+            <svg
+              (click)="sortUp('creationDate')"
+              class="bi bi-arrow-up-short"
+              width="1em"
+              height="1em"
+              viewBox="0 0 16 16"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M8 5.5a.5.5 0 01.5.5v5a.5.5 0 01-1 0V6a.5.5 0 01.5-.5z"
+                clip-rule="evenodd"
+              />
+              <path
+                fill-rule="evenodd"
+                d="M7.646 4.646a.5.5 0 01.708 0l3 3a.5.5 0 01-.708.708L8 5.707 5.354 8.354a.5.5 0 11-.708-.708l3-3z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </div>
+          <div>
+            <svg
+              (click)="sortDown('creationDate')"
+              class="bi bi-arrow-down-short"
+              width="1em"
+              height="1em"
+              viewBox="0 0 16 16"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M4.646 7.646a.5.5 0 01.708 0L8 10.293l2.646-2.647a.5.5 0 01.708.708l-3 3a.5.5 0 01-.708 0l-3-3a.5.5 0 010-.708z"
+                clip-rule="evenodd"
+              />
+              <path
+                fill-rule="evenodd"
+                d="M8 4.5a.5.5 0 01.5.5v5a.5.5 0 01-1 0V5a.5.5 0 01.5-.5z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </div>
+        </span>
+      </th>
+      <th scope="col">
+        <span>
+          Имя
+        </span>
+        <span>
+          <div>
+            <svg
+              (click)="sortUp('name')"
+              class="bi bi-arrow-up-short"
+              width="1em"
+              height="1em"
+              viewBox="0 0 16 16"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M8 5.5a.5.5 0 01.5.5v5a.5.5 0 01-1 0V6a.5.5 0 01.5-.5z"
+                clip-rule="evenodd"
+              />
+              <path
+                fill-rule="evenodd"
+                d="M7.646 4.646a.5.5 0 01.708 0l3 3a.5.5 0 01-.708.708L8 5.707 5.354 8.354a.5.5 0 11-.708-.708l3-3z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </div>
+          <div>
+            <svg
+              (click)="sortDown('name')"
+              class="bi bi-arrow-down-short"
+              width="1em"
+              height="1em"
+              viewBox="0 0 16 16"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M4.646 7.646a.5.5 0 01.708 0L8 10.293l2.646-2.647a.5.5 0 01.708.708l-3 3a.5.5 0 01-.708 0l-3-3a.5.5 0 010-.708z"
+                clip-rule="evenodd"
+              />
+              <path
+                fill-rule="evenodd"
+                d="M8 4.5a.5.5 0 01.5.5v5a.5.5 0 01-1 0V5a.5.5 0 01.5-.5z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </div>
+        </span>
+      </th>
+      <th scope="col">
+        <span>
+          Очки
+        </span>
+        <span>
+          <div>
+            <svg
+              (click)="sortUp('score')"
+              class="bi bi-arrow-up-short"
+              width="1em"
+              height="1em"
+              viewBox="0 0 16 16"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M8 5.5a.5.5 0 01.5.5v5a.5.5 0 01-1 0V6a.5.5 0 01.5-.5z"
+                clip-rule="evenodd"
+              />
+              <path
+                fill-rule="evenodd"
+                d="M7.646 4.646a.5.5 0 01.708 0l3 3a.5.5 0 01-.708.708L8 5.707 5.354 8.354a.5.5 0 11-.708-.708l3-3z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </div>
+          <div>
+            <svg
+              (click)="sortDown('score')"
+              class="bi bi-arrow-down-short"
+              width="1em"
+              height="1em"
+              viewBox="0 0 16 16"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M4.646 7.646a.5.5 0 01.708 0L8 10.293l2.646-2.647a.5.5 0 01.708.708l-3 3a.5.5 0 01-.708 0l-3-3a.5.5 0 010-.708z"
+                clip-rule="evenodd"
+              />
+              <path
+                fill-rule="evenodd"
+                d="M8 4.5a.5.5 0 01.5.5v5a.5.5 0 01-1 0V5a.5.5 0 01.5-.5z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </div>
+        </span>
+      </th>
       <th scope="col">Добавить</th>
-      <th scope="col">Убрать</th>
-      <th scope="col">Удалить</th>
+      <th scope="col">Снизить</th>
     </tr>
   </thead>
   <tbody>
     <tr *ngFor="let user of users">
       <td>{{ user.id }}</td>
       <td>{{ user.creationDate | date }}</td>
-      <td (click)="navigateToUser(user.id)">
-        <span>{{ user.name }}</span>
+      <td (click)="navigateToUser(user.id)" class="d-flex ml-2">
+        <span class="like-link">{{ user.name }} </span>
+        <svg
+          (click)="deleteUser(user.id)"
+          class="bi bi-bucket ml-2"
+          width="1em"
+          height="1em"
+          viewBox="0 0 16 16"
+          fill="currentColor"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M8 1.5A4.5 4.5 0 003.5 6h-1a5.5 5.5 0 1111 0h-1A4.5 4.5 0 008 1.5z"
+            clip-rule="evenodd"
+          />
+          <path
+            fill-rule="evenodd"
+            d="M1.61 5.687A.5.5 0 012 5.5h12a.5.5 0 01.488.608l-1.826 8.217a1.5 1.5 0 01-1.464 1.175H4.802a1.5 1.5 0 01-1.464-1.175L1.512 6.108a.5.5 0 01.098-.42zm1.013.813l1.691 7.608a.5.5 0 00.488.392h6.396a.5.5 0 00.488-.392l1.69-7.608H2.624z"
+            clip-rule="evenodd"
+          />
+        </svg>
       </td>
-      <td><input [value]="user.score" /></td>
-      <td><button>+</button></td>
-      <td><button>-</button></td>
-      <td><button>Мусорка</button></td>
+      <td>
+        <input
+          (input)="somethingChangedAtScores($event, user.id)"
+          [value]="user.score"
+        />
+      </td>
+      <td><button (click)="incrementScore(user.score, user.id)">+</button></td>
+      <td><button (click)="decrementScore(user.score, user.id)">-</button></td>
     </tr>
   </tbody>
 </table>
-<form [formGroup]="userForm">
+<form [formGroup]="userForm" novalidate>
   <input formControlName="name" placeholder="Имя" />
-  <button (click)="addUser()">Добавить</button>
+  <button (click)="addUser()" class="ml-2">Добавить</button>
+  <span class="error" *ngIf="userForm.controls.name.errors">
+    {{ userForm.controls.name.errors.error }}
+  </span>
 </form>
