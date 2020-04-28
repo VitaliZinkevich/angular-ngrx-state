@@ -1,9 +1,9 @@
 <form [formGroup]="userForm" novalidate class="mb-3">
   <input formControlName="name" placeholder="Имя" />
   <button (click)="addUser()" class="ml-2">Добавить</button>
-  <span class="error" *ngIf="userForm.controls.name.errors">
+  <!-- <span class="error" *ngIf="userForm.controls.name.errors">
     {{ userForm.controls.name.errors.error }}
-  </span>
+  </span> -->
 </form>
 <table class="table table-hover">
   <thead class="thead-dark">

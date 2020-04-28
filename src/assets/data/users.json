@@ -1,22 +1,20 @@
-{
-  "users": [
-    {
-      "id": 1588078755152,
-      "name": "Luis",
-      "creationDate": "Tue Apr 25 2020 15:56:10 GMT+0300 (Moscow Standard Time)",
-      "score": 15
-    },
-    {
-      "id": 1588078755153,
-      "name": "Amanda",
-      "creationDate": "Tue Apr 26 2020 15:57:10 GMT+0300 (Moscow Standard Time)",
-      "score": 16
-    },
-    {
-      "id": 1588078755155,
-      "name": "Edison",
-      "creationDate": "Tue Apr 28 2020 15:58:10 GMT+0300 (Moscow Standard Time)",
-      "score": 19
-    }
-  ]
-}
+[
+  {
+    "id": 1588078755152,
+    "name": "Luis",
+    "creationDate": "Tue Apr 25 2020 15:56:10 GMT+0300 (Moscow Standard Time)",
+    "score": 15
+  },
+  {
+    "id": 1588078755153,
+    "name": "Amanda",
+    "creationDate": "Tue Apr 26 2020 15:57:10 GMT+0300 (Moscow Standard Time)",
+    "score": 16
+  },
+  {
+    "id": 1588078755155,
+    "name": "Edison",
+    "creationDate": "Tue Apr 28 2020 15:58:10 GMT+0300 (Moscow Standard Time)",
+    "score": 19
+  }
+]

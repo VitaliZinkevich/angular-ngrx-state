@@ -20,8 +20,8 @@ import {
   SortUsersSuccess,
 } from "../actions/user.actions";
 import { UserService } from "../../services/user.service";
-import { IUserHttp } from "../../models/http-models/user-http.interface";
 import { selectUserList } from "../selectors/user.selector";
+import { IUser } from "../../models/user.interface";
 
 @Injectable()
 export class UserEffects {
@@ -39,8 +39,15 @@ export class UserEffects {
   @Effect()
   getUsers$ = this._actions$.pipe(
     ofType<GetUsers>(EUserActions.GetUsers),
-    switchMap(() => this._userService.getUsers()),
-    switchMap((userHttp: IUserHttp) => of(new GetUsersSuccess(userHttp.users)))
+    withLatestFrom(this._store.pipe(select(selectUserList))),
+    switchMap(([id, users]) => {
+      if (users && users.length) {
+        return of(users);
+      } else {
+        return this._userService.getUsers();
+      }
+    }),
+    switchMap((userHttp: IUser[]) => of(new GetUsersSuccess(userHttp)))
   );
 
   @Effect()
