@@ -16,7 +16,7 @@ import { UsersComponent as UsersContainerComponent } from "./containers/users/us
 import { UsersComponent } from "./components/users/users.component";
 import { UserComponent } from "./containers/user/user.component";
 import { UserDetailsComponent } from "./components/user-details/user-details.component";
-
+import { storageMetaReducer } from "./store/reducers/storage.metareducer";
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +28,9 @@ import { UserDetailsComponent } from "./components/user-details/user-details.com
   imports: [
     BrowserModule,
     HttpClientModule,
-    StoreModule.forRoot(appReducers),
+    StoreModule.forRoot(appReducers, {
+      metaReducers: [storageMetaReducer],
+    }),
     EffectsModule.forRoot([UserEffects]),
     StoreRouterConnectingModule.forRoot({ stateKey: "router" }),
     !environment.production ? StoreDevtoolsModule.instrument() : [],
