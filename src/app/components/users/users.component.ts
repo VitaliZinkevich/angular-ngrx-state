@@ -43,10 +43,10 @@ export class UsersComponent implements OnInit {
     this.changeUserScore.emit({ score: event.target.value, id: userId });
   }
   sortUp(col: string) {
-    this.sort.emit({ key: col, order: "+" });
+    this.sort.emit({ key: col, order: "-" });
   }
   sortDown(col: string) {
-    this.sort.emit({ key: col, order: "-" });
+    this.sort.emit({ key: col, order: "+" });
   }
   incrementScore(score, userId) {
     this.changeUserScore.emit({ score: +score + 1, id: userId });

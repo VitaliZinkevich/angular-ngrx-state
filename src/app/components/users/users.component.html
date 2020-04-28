@@ -1,3 +1,10 @@
+<form [formGroup]="userForm" novalidate class="mb-3">
+  <input formControlName="name" placeholder="Имя" />
+  <button (click)="addUser()" class="ml-2">Добавить</button>
+  <span class="error" *ngIf="userForm.controls.name.errors">
+    {{ userForm.controls.name.errors.error }}
+  </span>
+</form>
 <table class="table table-hover">
   <thead class="thead-dark">
     <tr>
@@ -6,7 +13,7 @@
           ID
         </span>
         <span>
-          <div>
+          <span>
             <svg
               (click)="sortUp('id')"
               class="bi bi-arrow-up-short"
@@ -27,8 +34,6 @@
                 clip-rule="evenodd"
               />
             </svg>
-          </div>
-          <div>
             <svg
               (click)="sortDown('id')"
               class="bi bi-arrow-down-short"
@@ -49,7 +54,7 @@
                 clip-rule="evenodd"
               />
             </svg>
-          </div>
+          </span>
         </span>
       </th>
       <th scope="col">
@@ -57,7 +62,7 @@
           Дата внесения
         </span>
         <span>
-          <div>
+          <span>
             <svg
               (click)="sortUp('creationDate')"
               class="bi bi-arrow-up-short"
@@ -78,8 +83,6 @@
                 clip-rule="evenodd"
               />
             </svg>
-          </div>
-          <div>
             <svg
               (click)="sortDown('creationDate')"
               class="bi bi-arrow-down-short"
@@ -100,7 +103,7 @@
                 clip-rule="evenodd"
               />
             </svg>
-          </div>
+          </span>
         </span>
       </th>
       <th scope="col">
@@ -108,7 +111,7 @@
           Имя
         </span>
         <span>
-          <div>
+          <span>
             <svg
               (click)="sortUp('name')"
               class="bi bi-arrow-up-short"
@@ -129,8 +132,6 @@
                 clip-rule="evenodd"
               />
             </svg>
-          </div>
-          <div>
             <svg
               (click)="sortDown('name')"
               class="bi bi-arrow-down-short"
@@ -151,7 +152,7 @@
                 clip-rule="evenodd"
               />
             </svg>
-          </div>
+          </span>
         </span>
       </th>
       <th scope="col">
@@ -159,7 +160,7 @@
           Очки
         </span>
         <span>
-          <div>
+          <span>
             <svg
               (click)="sortUp('score')"
               class="bi bi-arrow-up-short"
@@ -180,8 +181,7 @@
                 clip-rule="evenodd"
               />
             </svg>
-          </div>
-          <div>
+
             <svg
               (click)="sortDown('score')"
               class="bi bi-arrow-down-short"
@@ -202,11 +202,15 @@
                 clip-rule="evenodd"
               />
             </svg>
-          </div>
+          </span>
         </span>
       </th>
-      <th scope="col">Добавить</th>
-      <th scope="col">Снизить</th>
+      <th scope="col">
+        <span>Добавить</span>
+      </th>
+      <th scope="col" class="">
+        <span>Снизить</span>
+      </th>
     </tr>
   </thead>
   <tbody>
@@ -247,10 +251,3 @@
     </tr>
   </tbody>
 </table>
-<form [formGroup]="userForm" novalidate>
-  <input formControlName="name" placeholder="Имя" />
-  <button (click)="addUser()" class="ml-2">Добавить</button>
-  <span class="error" *ngIf="userForm.controls.name.errors">
-    {{ userForm.controls.name.errors.error }}
-  </span>
-</form>
