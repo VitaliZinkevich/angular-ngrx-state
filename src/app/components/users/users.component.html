@@ -206,7 +206,7 @@
         </span>
       </th>
       <th scope="col">
-        <span>Добавить</span>
+        <span>Увеличить</span>
       </th>
       <th scope="col" class="">
         <span>Снизить</span>
@@ -217,7 +217,7 @@
     <tr *ngFor="let user of users">
       <td>{{ user.id }}</td>
       <td>{{ user.creationDate | date }}</td>
-      <td (click)="navigateToUser(user.id)" class="d-flex ml-2">
+      <td (click)="navigateToUser(user.id)" class="d-flex align-items-center">
         <span class="like-link">{{ user.name }} </span>
         <svg
           (click)="deleteUser(user.id)"

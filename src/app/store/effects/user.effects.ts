@@ -110,11 +110,11 @@ export class UserEffects {
         users.sort((a, b) => {
           if (data.order === "+") {
             return (
-              new Date(a[data.key]).getTime() - new Date(b[data.key]).getTime()
+              new Date(b[data.key]).getTime() - new Date(a[data.key]).getTime()
             );
           } else {
             return (
-              new Date(b[data.key]).getTime() - new Date(a[data.key]).getTime()
+              new Date(a[data.key]).getTime() - new Date(b[data.key]).getTime()
             );
           }
         });
@@ -122,9 +122,9 @@ export class UserEffects {
       if (data.key === "id" || data.key === "score") {
         users.sort((a, b) => {
           if (data.order === "+") {
-            return a[data.key] - b[data.key];
-          } else {
             return b[data.key] - a[data.key];
+          } else {
+            return a[data.key] - b[data.key];
           }
         });
       }
