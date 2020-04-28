@@ -1,0 +1,5 @@
+<app-users
+  [users]="users$ | async"
+  (userSelected)="navigateToUser($event)"
+  (addUser)="navigateToUser($event)"
+></app-users>
