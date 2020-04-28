@@ -9,7 +9,6 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { appReducers } from "./store/reducers/app.reducers";
 import { environment } from "../environments/environment";
 import { AppRoutingModule } from "./app-routing.module";
-import { ConfigEffects } from "./store/effects/config.effects";
 import { UserEffects } from "./store/effects/user.effects";
 import { AppComponent } from "./app.component";
 import { UserService } from "./services/user.service";
@@ -30,7 +29,7 @@ import { UserDetailsComponent } from "./components/user-details/user-details.com
     BrowserModule,
     HttpClientModule,
     StoreModule.forRoot(appReducers),
-    EffectsModule.forRoot([UserEffects, ConfigEffects]),
+    EffectsModule.forRoot([UserEffects]),
     StoreRouterConnectingModule.forRoot({ stateKey: "router" }),
     !environment.production ? StoreDevtoolsModule.instrument() : [],
     AppRoutingModule,

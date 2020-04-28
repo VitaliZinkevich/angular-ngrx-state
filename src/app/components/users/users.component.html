@@ -14,7 +14,9 @@
     <tr *ngFor="let user of users">
       <td>{{ user.id }}</td>
       <td>{{ user.creationDate | date }}</td>
-      <td (click)="navigateToUser(user.id)">{{ user.name }}</td>
+      <td (click)="navigateToUser(user.id)">
+        <span>{{ user.name }}</span>
+      </td>
       <td><input [value]="user.score" /></td>
       <td><button>+</button></td>
       <td><button>-</button></td>
